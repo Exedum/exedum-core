@@ -80,12 +80,7 @@ contract Comptroller is Setters {
         uint256 poolReward = newSupply.mul(Constants.getOraclePoolRatio()).div(100);
         mintToPool(poolReward);
 
-        // 0-b. Pay out to Treasury
-        uint256 treasuryReward = newSupply.mul(Constants.getTreasuryRatio()).div(10000);
-        mintToTreasury(treasuryReward);
-
-        uint256 rewards = poolReward.add(treasuryReward);
-        newSupply = newSupply > rewards ? newSupply.sub(rewards) : 0;
+        newSupply = newSupply > poolReward ? newSupply.sub(poolReward) : 0;
 
         // 1. True up redeemable pool
         uint256 newRedeemable = 0;
@@ -143,12 +138,6 @@ contract Comptroller is Setters {
     function mintToPool(uint256 amount) private {
         if (amount > 0) {
             dollar().mint(pool(), amount);
-        }
-    }
-
-    function mintToTreasury(uint256 amount) private {
-        if (amount > 0) {
-            dollar().mint(Constants.getTreasuryAddress(), amount);
         }
     }
 

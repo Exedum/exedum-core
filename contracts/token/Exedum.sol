@@ -1,19 +1,3 @@
-/*
-    Copyright 2020 Empty Set Squad <emptysetsquad@protonmail.com>
-
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
-*/
-
 pragma solidity ^0.5.17;
 pragma experimental ABIEncoderV2;
 
@@ -23,18 +7,39 @@ import "@openzeppelin/contracts/access/roles/MinterRole.sol";
 import "./Permittable.sol";
 import "./IExedum.sol";
 
-
 contract Exedum is IExedum, MinterRole, ERC20Detailed, Permittable, ERC20Burnable  {
+
+    address _pool;
+    uint256 public _fee;
+
 
     constructor()
     ERC20Detailed("Exedum", "EXED", 18)
     Permittable()
     public
-    { }
+    {
+        _fee = 100; // 1%
+    }
+
+    function setPool(address pool) external onlyMinter {
+        require(pool == address(0), "Pool already setted");
+        _pool = pool;
+    }
 
     function mint(address account, uint256 amount) public onlyMinter returns (bool) {
         _mint(account, amount);
         return true;
+    }
+
+    function _transfer(address sender, address recipient, uint256 amount) internal {
+        if (_pool == address(0)) {
+            super._transfer(sender, recipient, amount);
+        } else {
+            uint256 feeamount = _amount.mul(_fee).div(10000);
+            uint256 remamount = _amount.sub(feeamount);
+            super._transfer(sender, recipient, remamount);
+            super._transfer(sender, _pool, feeamount);
+        }
     }
 
     function transferFrom(address sender, address recipient, uint256 amount) public returns (bool) {
