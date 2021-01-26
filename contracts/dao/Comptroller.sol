@@ -1,4 +1,18 @@
 /*
+    // https://exedum.io
+    ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
+    $$$$$$$$\ $$\   $$\ $$$$$$$$\ $$$$$$$\  $$\   $$\ $$\      $$\ 
+    $$  _____|$$ |  $$ |$$  _____|$$  __$$\ $$ |  $$ |$$$\    $$$ |
+    $$ |      \$$\ $$  |$$ |      $$ |  $$ |$$ |  $$ |$$$$\  $$$$ |
+    $$$$$\     \$$$$  / $$$$$\    $$ |  $$ |$$ |  $$ |$$\$$\$$ $$ |
+    $$  __|    $$  $$<  $$  __|   $$ |  $$ |$$ |  $$ |$$ \$$$  $$ |
+    $$ |      $$  /\$$\ $$ |      $$ |  $$ |$$ |  $$ |$$ |\$  /$$ |
+    $$$$$$$$\ $$ /  $$ |$$$$$$$$\ $$$$$$$  |\$$$$$$  |$$ | \_/ $$ |
+    \________|\__|  \__|\________|\_______/  \______/ \__|     \__|
+
+    ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
     Copyright 2020 Exedum <exedum@protonmail.com>
 
     Licensed under the Apache License, Version 2.0 (the "License");

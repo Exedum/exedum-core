@@ -10,7 +10,7 @@
     "test": "mocha --timeout 10000 --exit --recursive test",
     "deploy": "truffle migrate --network mainnet",
     "verify": "truffle run verify Implementation --network mainnet",
-    "flatten-all": "del-cli ./flatten && mkdir \\flatten && npm run flatten-impl && npm run flatten-root && npm run flatten-deployer && npm run patch",
+    "flatten-all": "del-cli ./flatten && mkdir \\flatten && npm run flatten-impl && npm run flatten-root && npm run flatten-deployer && npm run flatten-all-verify",
     "flatten-impl": "truffle-flattener contracts/dao/Implementation.sol > flatten/Implementation.sol",
     "flatten-root": "truffle-flattener contracts/dao/Root.sol > flatten/Root.sol",
     "flatten-deployer": "truffle-flattener contracts/dao/Deployer.sol > flatten/Deployer.sol",

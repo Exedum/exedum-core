@@ -5,8 +5,8 @@ import "./external/Decimal.sol";
 
 library Constants {
     /* Chain */
-    // uint256 private constant CHAIN_ID = 1; // Mainnet
-    uint256 private constant CHAIN_ID = 42; // Kovan
+    uint256 private constant CHAIN_ID = 1; // Mainnet
+    // uint256 private constant CHAIN_ID = 42; // Kovan
 
 
     /* Bootstrapping */
@@ -15,12 +15,12 @@ library Constants {
     uint256 private constant BOOTSTRAPPING_SPEEDUP_FACTOR = 3; // 30 days @ 8 hours
 
     /* Oracle */
-    // address private constant USDC = address(0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48); // Mainnet
-    address private constant USDC = address(0x680B96bD01Ac9e50D1c80Df8Ba832f992e9E8707); // Kovan
+    address private constant USDC = address(0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48); // Mainnet
+    // address private constant USDC = address(0x680B96bD01Ac9e50D1c80Df8Ba832f992e9E8707); // Kovan
     uint256 private constant ORACLE_RESERVE_MINIMUM = 1e10; // 10,000 USDC
 
     /* Bonding */
-    uint256 private constant INITIAL_STAKE_MULTIPLE = 1e6; // 100 ESD -> 100M ESDS
+    uint256 private constant INITIAL_STAKE_MULTIPLE = 1e6; // 100 EXED -> 100M EXEDS
 
     /* Epoch */
     struct EpochStrategy {
@@ -35,8 +35,8 @@ library Constants {
 
     uint256 private constant CURRENT_EPOCH_OFFSET = 0;
     uint256 private constant CURRENT_EPOCH_START = 1611563266;
-    uint256 private constant CURRENT_EPOCH_PERIOD = 600;
-    // uint256 private constant CURRENT_EPOCH_PERIOD = 86400; //Mainnet 24 hours
+    // uint256 private constant CURRENT_EPOCH_PERIOD = 600; // Kovan 10 minutes
+    uint256 private constant CURRENT_EPOCH_PERIOD = 86400; //Mainnet 24 hours
 
     /* Governance */
     uint256 private constant GOVERNANCE_PERIOD = 9; // 9 epochs
@@ -48,8 +48,8 @@ library Constants {
 
     /* DAO */
     uint256 private constant ADVANCE_INCENTIVE = 1e20; // 100 EXED
-    // uint256 private constant DAO_EXIT_LOCKUP_EPOCHS = 15; // 15 epochs fluid // Mainnet
-    uint256 private constant DAO_EXIT_LOCKUP_EPOCHS = 5; // 5 epochs fluid // Testnet
+    uint256 private constant DAO_EXIT_LOCKUP_EPOCHS = 15; // 15 epochs fluid // Mainnet
+    // uint256 private constant DAO_EXIT_LOCKUP_EPOCHS = 5; // 5 epochs fluid // Kovan
 
     /* Pool */
     uint256 private constant POOL_EXIT_LOCKUP_EPOCHS = 5; // 5 epochs fluid
@@ -62,11 +62,6 @@ library Constants {
     uint256 private constant SUPPLY_CHANGE_LIMIT = 3e16; // 3%
     uint256 private constant COUPON_SUPPLY_CHANGE_LIMIT = 6e16; // 6%
     uint256 private constant ORACLE_POOL_RATIO = 20; // 20%
-
-    /* Deployed */
-    address private constant DAO_ADDRESS = address(0x443D2f2755DB5942601fa062Cc248aAA153313D3);
-    address private constant DOLLAR_ADDRESS = address(0x36F3FD68E7325a35EB768F1AedaAe9EA0689d723);
-    address private constant PAIR_ADDRESS = address(0x88ff79eB2Bc5850F27315415da8685282C7610F9);
 
     /**
      * Getters
@@ -170,17 +165,5 @@ library Constants {
 
     function getChainId() internal pure returns (uint256) {
         return CHAIN_ID;
-    }
-
-    function getDaoAddress() internal pure returns (address) {
-        return DAO_ADDRESS;
-    }
-
-    function getDollarAddress() internal pure returns (address) {
-        return DOLLAR_ADDRESS;
-    }
-
-    function getPairAddress() internal pure returns (address) {
-        return PAIR_ADDRESS;
     }
 }

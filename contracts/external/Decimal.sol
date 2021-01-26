@@ -1,4 +1,18 @@
 /*
+    // https://exedum.io
+    ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
+    $$$$$$$$\ $$\   $$\ $$$$$$$$\ $$$$$$$\  $$\   $$\ $$\      $$\ 
+    $$  _____|$$ |  $$ |$$  _____|$$  __$$\ $$ |  $$ |$$$\    $$$ |
+    $$ |      \$$\ $$  |$$ |      $$ |  $$ |$$ |  $$ |$$$$\  $$$$ |
+    $$$$$\     \$$$$  / $$$$$\    $$ |  $$ |$$ |  $$ |$$\$$\$$ $$ |
+    $$  __|    $$  $$<  $$  __|   $$ |  $$ |$$ |  $$ |$$ \$$$  $$ |
+    $$ |      $$  /\$$\ $$ |      $$ |  $$ |$$ |  $$ |$$ |\$  /$$ |
+    $$$$$$$$\ $$ /  $$ |$$$$$$$$\ $$$$$$$  |\$$$$$$  |$$ | \_/ $$ |
+    \________|\__|  \__|\________|\_______/  \______/ \__|     \__|
+
+    ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+    
     Copyright 2019 dYdX Trading Inc.
     Copyright 2020 Exedum <exedum@protonmail.com>
 

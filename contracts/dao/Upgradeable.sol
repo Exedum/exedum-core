@@ -1,4 +1,18 @@
 /*
+    // https://exedum.io
+    ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
+    $$$$$$$$\ $$\   $$\ $$$$$$$$\ $$$$$$$\  $$\   $$\ $$\      $$\ 
+    $$  _____|$$ |  $$ |$$  _____|$$  __$$\ $$ |  $$ |$$$\    $$$ |
+    $$ |      \$$\ $$  |$$ |      $$ |  $$ |$$ |  $$ |$$$$\  $$$$ |
+    $$$$$\     \$$$$  / $$$$$\    $$ |  $$ |$$ |  $$ |$$\$$\$$ $$ |
+    $$  __|    $$  $$<  $$  __|   $$ |  $$ |$$ |  $$ |$$ \$$$  $$ |
+    $$ |      $$  /\$$\ $$ |      $$ |  $$ |$$ |  $$ |$$ |\$  /$$ |
+    $$$$$$$$\ $$ /  $$ |$$$$$$$$\ $$$$$$$  |\$$$$$$  |$$ | \_/ $$ |
+    \________|\__|  \__|\________|\_______/  \______/ \__|     \__|
+
+    ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+    
     Copyright 2018-2019 zOS Global Limited
     Copyright 2020 Exedum <exedum@protonmail.com>
 

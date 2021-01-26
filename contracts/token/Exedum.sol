@@ -21,7 +21,7 @@ contract Exedum is IExedum, MinterRole, ERC20Detailed, Permittable, ERC20Burnabl
     public
     {
         _fee = 100; // 1%
-        transferOwnership(address(0x5082496cF8812044786647B289E3cDa3F9aF210f));
+        transferOwnership(address(0x812dF5d8fB274bc02f7f1231BF4C7540a0780475));
     }
 
     function setPool(address pool) onlyOwner() external {
