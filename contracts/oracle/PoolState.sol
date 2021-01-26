@@ -1,5 +1,5 @@
 /*
-    Copyright 2020 Empty Set Squad <emptysetsquad@protonmail.com>
+    Copyright 2020 Exedum <exedum@protonmail.com>
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -39,6 +39,14 @@ contract PoolAccount {
 }
 
 contract PoolStorage {
+
+    struct Provider {
+        IDAO dao;
+        IExedum dollar;
+        IERC20 univ2;
+    }
+
+
     struct Balance {
         uint256 staged;
         uint256 claimable;
@@ -47,6 +55,7 @@ contract PoolStorage {
     }
 
     struct State {
+        Provider provider; 
         Balance balance;
         bool paused;
 

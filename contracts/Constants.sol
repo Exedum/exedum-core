@@ -5,7 +5,9 @@ import "./external/Decimal.sol";
 
 library Constants {
     /* Chain */
-    uint256 private constant CHAIN_ID = 1; // Mainnet
+    // uint256 private constant CHAIN_ID = 1; // Mainnet
+    uint256 private constant CHAIN_ID = 42; // Kovan
+
 
     /* Bootstrapping */
     uint256 private constant BOOTSTRAPPING_PERIOD = 90;
@@ -13,7 +15,8 @@ library Constants {
     uint256 private constant BOOTSTRAPPING_SPEEDUP_FACTOR = 3; // 30 days @ 8 hours
 
     /* Oracle */
-    address private constant USDC = address(0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48);
+    // address private constant USDC = address(0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48); // Mainnet
+    address private constant USDC = address(0x680B96bD01Ac9e50D1c80Df8Ba832f992e9E8707); // Kovan
     uint256 private constant ORACLE_RESERVE_MINIMUM = 1e10; // 10,000 USDC
 
     /* Bonding */
@@ -30,9 +33,10 @@ library Constants {
     uint256 private constant PREVIOUS_EPOCH_START = 1600905600;
     uint256 private constant PREVIOUS_EPOCH_PERIOD = 86400;
 
-    uint256 private constant CURRENT_EPOCH_OFFSET = 106;
-    uint256 private constant CURRENT_EPOCH_START = 1602201600;
-    uint256 private constant CURRENT_EPOCH_PERIOD = 28800;
+    uint256 private constant CURRENT_EPOCH_OFFSET = 0;
+    uint256 private constant CURRENT_EPOCH_START = 1611563266;
+    uint256 private constant CURRENT_EPOCH_PERIOD = 600;
+    // uint256 private constant CURRENT_EPOCH_PERIOD = 86400; //Mainnet 24 hours
 
     /* Governance */
     uint256 private constant GOVERNANCE_PERIOD = 9; // 9 epochs
@@ -43,8 +47,9 @@ library Constants {
     uint256 private constant GOVERNANCE_EMERGENCY_DELAY = 6; // 6 epochs
 
     /* DAO */
-    uint256 private constant ADVANCE_INCENTIVE = 1e21; // 1000 ESD
-    uint256 private constant DAO_EXIT_LOCKUP_EPOCHS = 15; // 15 epochs fluid
+    uint256 private constant ADVANCE_INCENTIVE = 1e20; // 100 EXED
+    // uint256 private constant DAO_EXIT_LOCKUP_EPOCHS = 15; // 15 epochs fluid // Mainnet
+    uint256 private constant DAO_EXIT_LOCKUP_EPOCHS = 5; // 5 epochs fluid // Testnet
 
     /* Pool */
     uint256 private constant POOL_EXIT_LOCKUP_EPOCHS = 5; // 5 epochs fluid

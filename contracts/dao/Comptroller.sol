@@ -1,5 +1,5 @@
 /*
-    Copyright 2020 Empty Set Squad <emptysetsquad@protonmail.com>
+    Copyright 2020 Exedum <exedum@protonmail.com>
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -103,7 +103,7 @@ contract Comptroller is Setters {
 
         balanceCheck();
 
-        return (newRedeemable, newSupply.add(rewards));
+        return (newRedeemable, newSupply.add(poolReward));
     }
 
     function resetDebt(Decimal.D256 memory targetDebtRatio) internal returns (uint256) {
